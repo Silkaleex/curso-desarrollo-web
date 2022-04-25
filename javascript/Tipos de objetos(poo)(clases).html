@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de objetos(poo)(clases)</title>
+    <style>
+        body{
+            background-color: #490088;
+            font-family: inherit;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+            
+        }
+        section{
+            background-color: #00ceff;
+            border: 10px groove #00ff6c;
+            height: 400px;
+            width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+            color:#ccb6ff;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <script>
+    //objetos primitivos
+        var cadena = 'cadena';
+        var obj_cadena = new String('cadena');
+        console.log(cadena);
+        console.log(obj_cadena);
+        
+        var numero = 7;
+        var obj_numero = new Number(10);
+        console.log(numero);
+        console.log(obj_numero);
+        
+        var booleano = true;
+        var obj_booleano = new Boolean(false);
+        console.log(booleano);
+        console.log(obj_booleano);
+        
+        //objetos compuestos
+        var arreglo = [0, 1, 2, 3];
+        var obj_arreglo = new Array(0,1,2,3);
+        console.log(arreglo);
+        console.log(obj_arreglo);
+        
+        var objeto_literal = { nombre: 'Aleex', edad: 26};
+        var objeto_constructor = new Object();
+        objeto_constructor.nombre = "aleex";
+        objeto_constructor.edad = 26;
+        console.log(objeto_literal);
+        console.log(objeto_constructor);
+        
+        //Objetos predefinidos
+        var fecha = new Date();
+        console.log(String);
+        console.log(Math);
+        console.log(fecha);
+        console.log(Number);
+        console.log(history);
+        console.log(location);
+        console.log(document);
+        
+        //Objetos definidos por el usuario
+        function Persona() {
+            //Propiedades o caracteristicas
+            this.colorPelo = "Negro";
+            this.edad = 25
+            
+            //Metodos o capacidades(Cosas que puede Hacer)
+            this.decirNombre = function () {
+                return "Mi Nombre es Alejandro";
+            }
+            this.caminar = function () {
+                return "Estoy caminando!";
+            }
+        }
+        
+        var alejandro = new Persona();
+        console.log( alejandro.colorPelo );
+        console.log( alejandro.edad );
+        console.log( alejandro.decirNombre() );
+        console.log( alejandro.caminar() );
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: purple;
+}
+
+div{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid red;
+    box-sizing: border-box;
+    background-color: darkred;
+    margin: 50% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-pacman:before {
+  content: "\2622";
+}
+
+span{
+    font-size:100px;
+    padding-bottom:50px;
+    transition: all .5s ease;
+}
+div:hover span { font-size: 400px;
+    margin:20px;
+    transform: rotate(1000rad);
+    transform: rotate(1000turn);
+    transform-origin: center ;
+ 
+}
+   

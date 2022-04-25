@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funciones anonimas -Autoejecutables</title>
+    <style>
+        body{
+            background-color: darkred;
+            font-family: serif;
+            margin: 0;
+            padding: 0;
+            padding-top:100px;
+        }
+        section{
+            background-color: darkorange;
+            border:5px dashed red;
+            height: auto;
+            max-width: 500px;
+            margin:0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <script>
+//        Ejemplo 1
+//            var nombre = function(){
+//                alert("Hola mundo")
+//            }
+//            
+//            nombre();
+//         Ejemplo 2
+//            (function(){
+//                
+//                alert("Hola Mundo");
+//                
+//            })();
+//          Ejemplo 3
+//            (function () {
+//            alert("Esto es una funcion anonima Autoejecutable");
+//            })()
+//          Ejemplo 4
+//            (function (num1, num2){
+//                var total = num1+num2;
+//                document.write(total);
+//            })(7,7);
+//          Ejemplo 5
+            var num1 = 25;
+            var num2 = 25;
+            
+            (function(){
+                var num1 = 7;
+                var num2 = 7;
+                
+                function suma () {
+                return num1 + num2;
+             }
+                
+            alert(suma())
+                
+             })();
+            
+            alert(num1+num2);
+   
+        </script>
+    </section>
+</body>
+</html>

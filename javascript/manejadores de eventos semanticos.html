@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manejadores de eventos con funciones externas</title>
+    <style>
+    
+        body{
+            background-color: #ceff00;
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+        
+        section{
+            background-color: darkorange;
+            border:5px groove black;
+            height: auto;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+<body>
+
+<section id="mouse">
+   
+    <button id="presioname">Presioname</button>
+    
+</section>
+
+<script>
+    
+    function mostrarMensaje () {
+       alert('Me has presionado')
+   }
+    function entrar () {
+        alert('Has entrado en la seccion')
+    }
+    function salir () {
+        alert('Has salido de la seccion')
+    }
+    
+    window.onload = function () {
+        document.getElementById('presioname').onclick = mostrarMensaje; 
+        
+        var seccion = document.getElementById('mouse');
+        seccion.onmouseover = entrar;
+        seccion.onmouseout = salir;
+    }
+    
+   
+    
+</script>
+</body>
+</html>

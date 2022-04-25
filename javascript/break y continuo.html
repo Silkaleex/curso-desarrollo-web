@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Break y continuo</title>
+        <style>
+        body{
+            background-color: #5800ff;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+            color: #6200ff;
+            font-weight: bold;
+        }
+
+        
+        table{
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th{
+            color: #000aff;
+        }
+        th, td{
+            border: 5px groove #006c80;
+            padding: 7px;
+            background-color: #67fff3;
+        }
+        caption{
+            color: #00ff6c;
+            font-weight: bold;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        
+        <script>
+        
+            for ( var i=1; i<=10; i++ ) {
+//                alert(i)
+//                if ( i==4 ) {
+//                    continue;
+//                }
+//continue salta o elimina esta tabla y no se muestra.
+                
+                if( i==5 ){
+                    break;
+                  }   
+//Break rompe las tablas, es decir pone del 1 al 4 del 5 en adelante no se mostraran.
+//si ponemos break al final lo que hace es mostrar esa tabla al final del todo, javascript empieza a leer de arriba hacia abajo.
+                    
+                document.write("<table><caption>Tabla de multiplicar del "+i+"</caption></tbody>");
+                               
+            for ( var x=1; x<=10; x++ ) {
+                    document.write("<tr>");
+                    
+                    document.write("<td>"+i+"</td><td>"+x+"</td><td>"+ (i*x) +"</td>");
+                    
+                    document.write("</tr>");
+                }
+                document.write("</tbody></table><br>");
+            }
+//                var num = 0;
+//                
+//                while( num < 5 ) {
+//                    incremento = prompt("la cuenta está en "+ num +",sigo incrementando?","si").toLocaleLowerCase();
+//                    if( incremento == "no" ){
+//                        continue;
+//                    }
+//                    
+//                    num++;
+//                }
+            var num = 0;
+            
+            while( num < 5 ) {
+                
+                alert("La cuenta esta en"+ num)
+                
+                if ( num == 3) {
+                    
+                    break;
+                }
+                
+                num++;
+            }
+            
+            alert("continuando el flujo de ejecución")
+            
+        </script>
+        
+    </section>
+</body>
+</html>

@@ -1,0 +1,49 @@
+*{
+    
+}
+p span:first-child {
+    background-color: aqua;
+}
+p span:last-child{
+    background-color: brown;
+    color:#fff;
+}
+/*para que funcione necesitamos dejar un solo span dentro de la estiqueta p en este caso*/
+a span:only-child}{
+    background-color: chartreuse;
+    font-size: 25px;
+}
+a:lang(es) {
+    background-color:skyblue;
+    color: white;
+    padding:5px;
+    text-decoration: none;
+        
+}
+a {
+    display:block;
+    margin: 5px;
+}
+a:link{
+    color: greenyellow;
+    text-decoration: none;
+}
+a:visited{
+    color: darkred;
+}
+a:active{
+    background-color: black;
+    color:white;
+    padding: 20px; 
+}
+a:hover , p:hover {
+    background-color: aquamarine;
+    color:black;
+    padding:20px;
+    cursor: pointer;
+}
+input:focus, textarea:focus{
+    background-color: firebrick;
+    color: white;
+    padding: 20px;
+}

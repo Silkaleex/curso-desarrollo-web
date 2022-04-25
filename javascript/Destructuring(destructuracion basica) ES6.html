@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring(destructuracion basica)ES6</title>
+</head>
+<body>
+   <div id="resultado"></div>
+    <script>
+        var resultado = document.getElementById('resultado');
+        var frutas = [
+            "Manzana",
+            "Pera",
+            "Melocoton",
+            "Durazno"
+        ];
+        
+        var manzana = frutas[0];
+        var pera = frutas[1];
+        var melocoton = frutas[2];
+        
+        var[ manzana, pera, melocoton, durazno ] = frutas;
+        
+       [ manzana, pera, melocoton, durazno ] = frutas;
+            
+        console.log(manzana);
+        console.log(pera)
+        console.log(melocoton);
+        
+//destructuring, invirtiendo datos de variables        
+        
+        var a = 3,
+            b = 7;
+        [ a, b ] = [ b, a ];
+        
+        console.log( a );
+        console.log( b );
+        
+    function x(){
+       return[ 5, 8, 9 ]; 
+    }
+        var [ a, b, c ] = x();
+        
+        console.log(`A: ${a}, B: ${b}, C: ${c}, `);
+        
+    var persona = {
+      nombre: "Alejandro",
+      apellido: "Pascual",
+      edad: 26
+    };
+        
+        var{ nombre, apellido, edad } = persona;
+        var{ nombre: n, apellido: ap, edad: e } = persona;
+         var nombre, apellido, edad;
+        ({nombre, apellido} = persona);
+        
+        
+        console.log(`Mi nombre es ${nombre} ${apellido}`);
+        console.log(`Mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`);
+        console.log(`Mi nombre es ${n} ${ap} y tengo ${e} años.`);
+        
+        
+        function saludo( opciones ) {
+            opciones = opciones === undefined ? {} : opciones;
+            
+            var mensaje = opciones.mensaje === undefined ? 'No hay mensaje' : opciones.mensaje;
+            var nombre = opciones.nombre === undefined ? 'ninguna persona' : opciones.nombre;
+            
+            console.log(`Mensaje de: ${nombre}\nCuerpo del mensaje: ${mensaje}`);
+        }
+        
+        saludo({
+        mensaje:"Hola Mundo",
+        nombre:"Alejandro Pascual"
+        });
+        
+        function saludo( {mensaje = "No hay mensaje", nombre = "Ninguna persona" } = {} ) {
+
+            console.log(`Mensaje de: ${nombre}\nCuerpo del mensaje: ${mensaje}`);
+        }
+        
+        saludo({
+            mensaje:"Hola Mundo",
+            nombre:"Alejandro Pascual"
+        });
+        
+        var publicacion = {
+            titulo:"Javascript",
+            mensaje:"Buena publicación",
+            fecha:"2021-05-12",
+            comentarios : [{
+                de: "Alejandro Pascual",
+                mensaje: "Muy bueno lo nuevo de JavaScript",
+                fecha: "2021-05-12",
+                datos : {
+                    edad : 26,
+                    email : "lamoscacojonera@gmail.com"
+                }
+            },
+             {
+              de: "Sagrado Manolin",
+              mensaje: "Muy bueno lo nuevo de Jvascript",
+              fecha: "2021-05-12",
+              datos : {
+                  edad : 50,
+                  email : "pikantesexshoppudrecant@gmail.com"
+              }
+            }
+        ],
+            url:"/es/javascript"
+    };
+        var{ titulo: t, url, comentarios, comentarios: [ { mensaje }, {mensaje: msg2} ] } = publicacion;
+        
+        console.log( t );
+        console.log( url );
+        console.log( mensaje );
+        console.log( msg2 );
+        console.log( comentarios );
+        
+        for( var {de, datos:{edad, email}} of comentarios ){
+            console.log( de );
+            console.log( edad );
+            console.log( email );
+        }
+      
+        function usuarioId( { id } ){
+            return id;
+        }
+        
+        function apellidoUsuario( { nombreCompleto: { apellido } } ) {
+            return apellido;
+        }
+        
+        var usuario = {
+            id: 75,
+            nombrePraMostrar: "Alejandro Pascual",
+            nombreCompleto: {
+                primerNombre: "Alejandro",
+                Apellido: "Pascual"
+            }
+        };
+        
+        console.log( usuarioId( usuario ) );
+        console.log( apellidoUsuario( usuario ) );
+      
+        let clave = "x",
+            datos = {
+                x : "Hola"
+            };
+        let{ [clave]: l } = datos;
+        
+        console.log( l );
+    </script>
+</body>
+</html>

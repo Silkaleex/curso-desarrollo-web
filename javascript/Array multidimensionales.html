@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays Multidimensionales</title>
+    <style>
+        body{
+            background-color: #fa0030;
+        }
+        
+        section{
+            border:10px groove white;
+            padding: 10px;
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 600px;
+            height: 500px;
+            text-align: center;
+            font-size: 20px;
+            color: darkred;
+            font-family: monospace;
+            background-color: orangered;   
+        }
+        
+        h1{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        p{
+            text-align: center;
+            align-items: center;
+            font-size:20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        
+        <h1>Arrays de Arrays - Multidimensionales</h1>
+<script>
+// Esto es una manera de ver arrayMultidimensional  
+    //3 parte 
+    var tridi = [];
+    tridi[0] = "carro"
+    tridi[1] = "Moto"
+    tridi[2] = "Barco"
+    //2 parte  
+    var bidi = [];
+    bidi[0] = "pelota"
+    bidi[1] = "perro"
+    bidi[2] = "gato"
+    bidi[3] = tridi;
+    //1 parte  
+    var uni = [];
+    uni[0] = bidi;
+    document.write(uni[0][3][1]);
+    
+//En este caso fijarse bien e en los corchetes cada uno es una dimension distina
+
+//Ejemplo complicado
+    
+  var aM = ["Avion", 25, true,["perro", "gato", 25,["pala","pico"], "conejo", false ], "carro", "moto" ];     
+    document.write("<p>");
+    document.write(aM[3][3][0])
+    document.write("</p>");
+    
+//Ejemplo recomendado
+    
+    var fruta = [];
+    
+    //forma de la manzana
+    fruta["manzana"] = [];
+    fruta["manzana"]["color"] = "Roja";
+    fruta["manzana"]["forma"] = "Ovalada";
+    fruta["manzana"]["sabor"] = "dulce";
+    
+    //precios de la manzana en el mundo
+    fruta["manzana"]["precio"] = [];
+    fruta["manzana"]["precio"]["dolares"] = 1;
+    fruta["manzana"]["precio"]["euro"] = 0.7;
+    fruta["manzana"]["precio"]["pesoC"] = 3000;
+    document.write("<p>");
+    
+    //como es la manzana
+    document.write("La manzana es de color" + fruta["manzana"]["color"] + "<br>");
+    
+    document.write("La manzana tiene una forma" + fruta["manzana"]["forma"] + "<br>");
+    
+    document.write("La manzana tiene un sabor" + fruta["manzana"]["sabor"] + "<br>");
+    
+    //precio
+    document.write("La manzana cuesta en America" + fruta["manzana"]["precio"]["dolares"] + "$<br>");
+    
+    document.write("La manzana cuesta en pesos colombianos" + fruta["manzana"]["precio"]["pesoC"] + "$<br>");
+    
+    document.write("La manzana cuesta en europa" + fruta["manzana"]["precio"]["euro"] + "€<br>");
+    
+    document.write("</p>");
+    
+</script>
+    </section>
+    
+</body>
+</html>

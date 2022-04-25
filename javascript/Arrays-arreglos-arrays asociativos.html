@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays, arreglos,matrices</title>
+    <style>
+    
+        body{
+            background-color: purple;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+        #resultados{
+            padding: 20px;
+            width: 500px;
+            height: 300px;
+            background-color: darkred;
+            margin: 0 auto;
+            border: 5px groove black
+        }
+    </style>
+    <script>
+    
+       var datos = new Array("Alejandro","Pascual",26,"España",170);
+        
+        alert(datos[0]);
+        
+     //si borramos new array y ponemos todo corchetes el navegador lo leera como codigo array, es mas comodo por que simplifica el codigo,El ejemplo esta a continuacion
+        
+        var datos = ["Alejandro","Pascual",26,"España",170];
+        
+        alert(datos);
+        
+    //otro ejemplo
+      var ejemplo = [];
+        ejemplo["nombre"] = "Pueblo";
+        ejemplo[2] = "Cielo";
+        
+        alert(ejemplo["nombre"]);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

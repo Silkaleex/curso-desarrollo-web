@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clousures</title>
+       <style>
+        body{
+            background-color: darkred;
+            font-family: serif;
+            margin: 0;
+            padding: 0;
+            padding-top:100px;
+            font-weight: bold;
+        }
+        section{
+            background-color: darkorange;
+            border:5px dashed red;
+            height: auto;
+            max-width: 500px;
+            margin:0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+               <script>
+//        Ejemplo 1    
+        function inicial() {
+            var nombre = "Silkaleex";
+            function mostrarNombre() {
+                document.write(nombre);
+            }
+            mostrarNombre();
+        }
+            inicial();
+//            
+//         Ejemplo 2
+            function log(n){
+                console.log(n);
+            }
+            function wr (x) {
+                document.write(x+"<br>");
+            }
+            
+            var operacion = function () {
+               var valor = 0;
+               var incrementar = function(){
+                   return valor+=5
+               }
+               return incrementar;
+            }
+            var ejecutar = operacion();
+            
+            console.log(ejecutar());
+            console.log(ejecutar());
+            console.log(ejecutar());
+            console.log(ejecutar());
+            log(ejecutar());
+            log(ejecutar());
+            log(ejecutar());
+            log(ejecutar());
+           function crearSumador (n) {
+               return function(n) {
+                   return n + n;
+               }
+           } 
+            var suma10 = crearSumador(10);
+            var suma20 = crearSumador(20);
+            var suma35 = crearSumador(35);
+            
+            log(suma10(5)); // 15
+            log(suma35(5));
+            
+    
+ 
+            
+        </script>
+    </section>
+</body>
+</html>

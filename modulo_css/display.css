@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+nav{
+    margin: 40px;
+    border: 5px dashed red;
+    padding: 10px;
+    
+}
+ul li{
+    list-style: none;
+    padding: 5px;
+    border: 1px dashed;
+}
+
+td, th {
+    padding: 30px;
+}
+
+div{
+    display: table;
+}
+article{
+    display: table-caption;
+    text-align: center;
+    border:1px solid black;
+}
+
+a{
+    display: table-row;
+}
+
+p{
+    display: table-cell;
+    padding: 10px;
+}
+
+section{
+    display:table-header-group;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Return y ambito de las variables</title>
+    <style>
+    
+        body{
+            background-color: aquamarine;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+        
+        section{
+            background-color: white;
+            border: 3px groove black;
+            height: auto;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+<body>
+   <section>
+       <script>
+       
+           function calcularIva (valor) {
+               valor = prompt("Ingrese el valor para calcular el IVA");
+               var total;
+                if ( valor <= 20 ) {
+                    return total= valor*.5;
+                }
+               else if( valor <= 80 ){
+                   return total= valor*.10
+               }
+                else{
+                    return total= valor*.21
+                }
+//              return "El IVA de €"+ valor +" euros es de: "+ total +"€";
+           }
+           var total = "Hola a continuacion calculemos el IVA:"
+           alert(total);
+           var iva = calcularIva();
+           
+           document.write( Math.round(iva) );
+           
+       </script>
+   </section>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+h3{
+	background-color: green;
+	color:white;
+	padding:20px;
+	font-family:cursive;
+}
+
+*{
+	margin:0;
+	padding:0;
+}
+
+
+
+p{
+	padding: 20px;
+	background-color: rebeccapurple;
+	color:white;
+}
+
+a{
+	text-decoration: none;
+}

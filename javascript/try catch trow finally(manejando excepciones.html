@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Try Catch Thorw Finally(Manjenado Excepciones)</title>
+        <style>
+        body{
+            background-color:#a05a98;
+            font-size: 25px;
+            font-weight: bold;
+            color: #ffffff;
+            padding-top: 200px;
+        }
+            section{
+                background-color: red;
+                border: 10px groove darkred;
+                padding: 0px;
+                  padding-top: 20px;
+                margin:0 auto;
+                width: 600px;
+                height: auto;
+              
+     
+            }
+            #boton{
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: cursive;
+                border: 10px groove violet;
+                width: 200px;
+                height: 60px;
+                border-radius: 50%;    
+            }
+            
+    </style>
+</head>
+<body>
+   <section>
+    <button id="boton">Ejecutar</button>
+    <p>
+        <script>
+            boton = document.getElementById("boton");
+            boton.addEventListener("click", prueba)
+            
+            function prueba() {
+                try{
+                    var num1 = parseInt(prompt( "ingresa el primer número" ) );
+                    var num2 = parseInt(prompt( "ingresa el segundo número") );
+                    
+                    if( isNaN(num1) || isNaN(num2) ) {
+                        throw "No has ingresado un número válido";
+                    }
+                }catch(e){
+                    alert( "Error: " + e );
+                }finally{
+                    alert("cualquier cosa")
+                }
+                
+            }
+        
+        </script>
+    </p>
+</section>
+</body>
+</html>

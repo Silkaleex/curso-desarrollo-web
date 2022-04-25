@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+p:first-line {
+    color:blueviolet;
+    font-size:30px;
+}
+
+p:first-letter {
+   font-size:40px;
+    background-color:red;
+    color:white;
+    padding: 4px 7px;
+    text-transform:uppercase;
+}
+
+h1::before {
+    content: 'Esta es la etiqueta H1';
+     font-size:100px;
+    color:firebrick;
+    font-family:fantasy;
+}
+
+h1::after{
+    content: '.';
+    font-size:100px;
+    color:firebrick;
+    font-family:fantasy;
+}
+
+::selection {
+     background-color: red;
+     color: white;
+     text-shadow: 10px 10px black;
+}
+
+h3::selection {
+    background-color: green;
+    color:white;
+}
+
+.texto {
+    height: 200px;
+    width:300px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-track:hover {
+    background-color: black;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: green;
+}
+
+::-webkit-scrollbar-button {
+    background-color: aquamarine;
+    background-image: image(img);
+}
+
+::-webkit-scrollbar-button:horizontal:decrement{
+    background-color: aquamarine;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background-color: darkblue
+}
+.parrafo{ 
+    height: 300px;
+    width:150px;
+    border: 5px solid pink;
+    overflow: auto;
+}
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Métodos o propiedades de los Arrays</title>
+    <style>
+    
+        body{
+            background-color: aquamarine;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+        
+        section{
+            background-color: beige;
+            border: 20px groove blue;
+            height: 500px;
+            width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Articulos</h1>
+        <script>
+        var articulos = ["libreta", "lapiz", "Borrador", "bolso"];
+        
+        document.write("<p>");
+            
+        document.write(articulos[0]+"<br>");
+            
+        articulos.unshift("tijeras");
+        
+        document.write(articulos[0]+"<br>");
+            
+        document.write(articulos[articulos.length-1]+"<br>");
+            
+         articulos.push("sacapuntas", "tablero", 25);    
+          
+         document.write(articulos[articulos.length-1]+"<br>");    
+        
+        articulos.pop();
+            
+        document.write(articulos [articulos.length-1]+"<br>");
+         
+        articulos.shift(articulos[0]+"<br>");
+            
+        document.write(articulos.length);
+            
+        document.write("</p>");
+            
+        
+        
+            
+        </script>
+    </section>
+</body>
+</html>

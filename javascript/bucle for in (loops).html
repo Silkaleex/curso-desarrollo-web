@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bucle FOR IN (Loops)</title>
+    <style>
+        body{
+            background-color:#3900ff;
+            font-size: 25px;
+            font-weight: bold;
+            color: #14ff00;
+        }
+        section{
+            align-content: center;
+            padding: 20px;
+            margin: 0 auto;
+            margin-top: 100px;
+            width: 500px;
+            height: auto;
+            background-color: #0a0083;
+            border:4px dashed #ffff00;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p>
+            <script>
+                function write(arg) {
+                    document.write(arg+"<br><br>");
+                }
+                
+                var miObjeto = {
+                    nombre: "Aleex",
+                    edad: 26,
+                    colorPelo: "Negro",
+                    estatura: 1.70,
+                    frutas:{
+                        fruta1:"Manzana",
+                        fruta2:"Pera"
+                    }
+                };
+                
+                var miArray = [ 5, 7, 15, "avion", "carro" ];
+                
+                for( i=0; i<miArray.length; i++ ) {
+                    write( miArray[i] );
+                }
+                
+                write("--------------------------");
+                
+                for( var x in miArray ){
+                    write( x );
+                }
+                
+                write("--------------------------");
+                
+               for( i  in miObjeto){
+                   
+                   if( typeof  miObjeto[i] == "object" ) {
+                       write("------- Hemos encontrado un tipo de dato'objeto',procedemos a imprimir sus claves y sus valores -----");
+                       
+                       write( "Nombre del objeto encontrado: '"+ i + "'" );
+                       
+                       for( x in miObjeto[i] ) {
+                           write( "Clave: "+ x + "<br>Valor: "+miObjeto[i][x] );
+                       }
+                       
+                       continue;
+                   }
+                   
+                    write( "El valor de \""+ i +"\" es: " + miObjeto[i] );
+               }
+                
+                
+            </script>
+        </p>
+    </section>
+</body>
+</html>

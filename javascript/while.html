@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>While</title>
+    <style>
+        body{
+            background-color: blue;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+        section{
+            background-color: cyan;
+            border: 10px solid black;
+            height: 500px;
+            width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        
+        table{
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th{
+            color: cornflowerblue;
+        }
+        th, td{
+            border: 5px dashed black;
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Meses del año</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script>
+                var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "octubre", "Noviembre", "Diciembre"];
+                
+                var contador = 0;
+                    
+                while( contador <meses.length ) {
+                document.write("(<tr>)");
+                document.write("(<td>)");
+                document.write(contador+1);
+                    
+                document.write("(</td>)");
+                    
+                document.write("(<td>)");
+                document.write(meses[contador]);
+                    
+                document.write("(</td>)");
+                    
+                document.write("(</tr>)");
+               
+                    contador++;
+                }
+                   alert(contador);
+                </script>
+            </tbody>
+        </table>
+        
+    </section>
+</body>
+</html>

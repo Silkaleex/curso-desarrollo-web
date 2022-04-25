@@ -1,0 +1,35 @@
+@media (max-width: 600px) and (min-height: 400px){
+    body { 
+        background-color: purple;
+    }
+}
+
+@media not all and (max-width: 800px){
+    body{
+        background-color:aqua;
+        color: blue;
+    }
+    h1{
+        font-size: 30px;
+        border: 5px groove green;
+        color:darkblue;
+    }
+} 
+
+@media only screen and (max-width 600px) {
+    body{
+        background-color: brown;
+        color: white;
+    }
+}
+@media print{
+    h1{
+        font-size: 70px;
+    }
+    
+}
+
+header .cajas .caja1 p::before {
+    content: "La ventana del navegador tiene un tamaño de 0 a 480px de ancho";
+ color:coral;
+}

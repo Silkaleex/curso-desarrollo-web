@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Helvetica, sans-serif;
+}
+.caja {
+    height: auto;
+    min-width: 700px;
+    background-color: coral;
+    border: 10px solid black;
+    border-top: 30px solid purple;
+    border-right: 30px solid yellow;
+    border-left: 30px solid green;
+    border-bottom: 30px solid blue;
+    border-style:groove;
+    padding: 10px 30px 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 100px 100px
+}
+p{
+    margin: 30px 1px 40px 1px;
+    border: 20px solid darkred;
+    text-align: center;
+}

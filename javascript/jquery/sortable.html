@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sortable</title>
+    <style>
+        body{
+            padding: 20px;
+            padding-right: 300px
+        }
+        section{
+            border: 1px solid black;
+            width: 600px;
+            height: auto;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: darkblue;
+          
+        }
+        h3{
+            border: 10px groove blue;
+            background-color: aquamarine;
+            font-family: serif;
+        }
+        li{
+            text-decoration: none;
+            list-style: none;
+            font-size: 30px;
+            text-align: right;
+        }
+        #ordenable{
+            border: 1px solid;
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        
+         #ordenable2{
+            border: 1px solid;
+            background-color: green;
+            padding: 10px;
+        }
+        
+         span.vertical{
+            border: 3px solid darkcyan;
+            background-color: #a6cbd8;
+            font-family: cursive;
+            font-weight: bold;
+        }
+        
+        span.vertical2{
+            border: 3px solid green;
+            background-color: yellowgreen;
+            font-family: cursive;
+            font-weight: bold;
+        }
+        .hoverOrdenable{
+            background-color: white !important;
+            border: 5px dashed #00ff9d;
+            padding: 13px;
+            height: 45px;
+        }
+        
+        #listaClonar li{
+            border: 1px solid;
+            background-color: #2c0080;
+            padding: 10px;
+            border: 5px groove purple;
+        }
+        
+         span.vertical3{
+            background-color:pink;
+            color: black;
+            border: 5px solid purple; 
+            font-family: cursive;
+            font-weight: bold;
+             
+        }
+    </style>
+</head>
+<body>
+   <section>
+       <h3>Jquery UI Sortable</h3>
+       <br>
+           <ul id="listaClonar">
+           <li id="draggable"><span class="vertical3">Item 1</span></li>
+           
+       </ul>
+       
+       <ul id="ordenable" class="conectar">
+           <li><span class="vertical">Item 1</span></li>
+           <li><span class="vertical">Item 2</span></li>
+           <li><span class="vertical">Item 3</span></li>
+           <li><span class="vertical">Item 4</span></li>
+           <li><span class="vertical">Item 5</span></li>
+           <li><span class="vertical">Item 6</span></li>
+           <li><span class="vertical">Item 7</span></li>
+       </ul>
+       
+         <ul id="ordenable2" class="conectar">
+           <li><span class="vertical2">Item 1</span></li>
+           <li><span class="vertical2">Item 2</span></li>
+           <li><span class="vertical2">Item 3</span></li>
+           <li><span class="vertical2">Item 4</span></li>
+           <li><span class="vertical2">Item 5</span></li>
+           <li><span class="vertical2">Item 6</span></li>
+           <li><span class="vertical2">Item 7</span></li>
+       </ul>
+   </section>
+    <script src="jquery-3.6.0.min.js"></script>
+     <script src="jquery-ui.min.js"></script>
+     <script src="sortable.js"></script> 
+</body>
+</html>

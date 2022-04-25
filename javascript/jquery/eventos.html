@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos y efectos</title>
+    <style>
+        body{
+            background-color: dodgerblue;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .eventos{
+            border: 20px dashed brown;
+            width: 300px;
+            height: auto;
+            margin:0 auto;
+            margin-top: 100px;
+            padding: 0px;
+            background-color: burlywood;
+        }
+        .esfera{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 128, 0, 0.67);
+            text-align: center;
+            padding: 0px 0;
+            margin: 0 auto;
+            border-radius: 50%
+        }
+        .azul{
+            background-color: rgba(0, 0, 255, 0.74);
+        }
+        
+        h1{
+            font-family: cursive;
+            font-size: 20px;
+            text-align: center;
+            
+        }
+        
+        h3{
+            text-align: center;
+        }
+        input#campo{
+           text-align: center;
+            margin: 0 auto;
+            margin-left: 60px;
+            
+        }
+        
+        #panel, #base{
+            padding: 5px;
+            text-align: center;
+            background-color: #edccee;
+            border: solid 1px #c3c3c3;
+        }
+        
+        #base{
+            cursor: pointer;
+        }
+        
+        #panel{
+            padding: 50px;
+            display: none;
+        }
+        #miclase{
+            padding: 50px;
+            display: block;
+        }
+        .image-responsive{
+            margin: 0 auto;
+            margin-bottom: 100px;
+            width: 300px;
+            height: 300px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="eventos">
+       
+    <h3>Jquery</h3>
+
+    <br>
+        
+    <div class="esfera"></div>
+       
+    <br><br>
+    
+    <input type="text" id="campo">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="base" class="miclase" title="contenedor">Click para mostrar el contenido</div>
+    <br><br>
+    <div id="panel">Hola Mundo!</div>
+    <br>
+    <br>
+    <button id="boton">Ocultar/Mostrar</button>   
+    <br>
+    <br>
+    <div class="contenido"></div>
+    <br>
+    <div id="miclase"></div>
+    
+    <img src="" class="image-responsive" alt="paisaje">
+    
+     </div>
+     
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="eventos.js"></script>  
+</body>
+</html>

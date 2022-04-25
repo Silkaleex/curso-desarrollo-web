@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Let y Const ECMAScript</title>
+    <style>
+        body{
+            background-color: #518600;
+        }
+            section{
+            margin: 0 auto;
+            margin-top:150px;
+            padding: 50px;
+            border: 10px solid black;
+            width: 300px;
+            height: auto;
+            background-color: #6bffc6;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;   
+        }
+    </style>  
+</head>
+<body>
+    <section>
+       <h1>Hay mas datos en la consola:)</h1>
+       <br>
+        <script>
+            'use strict'
+            
+            function write(arg){
+                document.write(arg+'<br><br>');
+            }
+            
+            var caja1 = 5;
+            
+            var caja1 = 5;
+            
+            write( caja1 );
+            
+            caja1 = "hola";
+            
+            write( caja1 );
+            
+            const caja2 = 25;
+            
+            write( caja2 );
+   
+            write( caja2 );
+            
+            let a = 1;
+            let b = 5;
+            let c = 15;
+               
+            console.log(a, b, c);
+             var x = 5;
+             var z = "texto";
+             
+            for(let x = 1; x != false; x = false) {
+                let z = 15;
+            }
+            console.log( x, z );
+            
+            for( var x = 1; x != false; x = false ) {
+                var z = 10
+            }
+            
+            console.log( x, z );
+            
+            if( true ) {
+                var numero = 5;
+                
+            }
+                console.log(numero);
+        </script>
+    </section>
+</body>
+</html>

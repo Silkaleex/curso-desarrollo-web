@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polimorfismo(POO)</title>
+        <style>
+        body{
+            background-color:#00ff76;
+            font-size: 25px;
+            font-weight: bold;
+            color: #14ff00;
+        }
+        section{
+            align-content: center;
+            padding: 20px;
+            margin: 0 auto;
+            margin-top: 100px;
+            width: 500px;
+            height: auto;
+            background-color: #1300ff;
+            border:20px groove #00e2ff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p>
+            <script>
+                
+                var app = new MiAplicacion();
+
+                var Robot = function(){
+                    
+                }
+                
+                function Robot() {
+                    
+                }
+                
+                Robot.prototype = {
+                    hablar: function() {
+                        alert("Hola, estoy Hablando")
+                    }
+                }
+                
+                var pepe = new Robot();
+                
+                pepe.hablar();
+                
+            //escribir
+                function Escribir(texto) {
+                    this.texto = texto;
+                }
+                
+                Escribir.prototype.ejecuta = function() {
+                    this.escribe();
+                }
+                
+                Escribir.prototype.escribe = function() {
+                    document.write(this.texto)
+                }
+            //calculadora
+                function Calculadora(num1, num2, calc) {
+                    this.num1 = parseInt(num1);
+                    this.num2 = parseInt(num2);
+                    this.calc = calc;
+                    var calculo;
+                }
+                
+                Calculadora.prototype.ejecuta = function() {
+                    this.analizador();
+                }
+                
+                Calculadora.prototype.analizador = function() {
+                    switch( this.calc ) {
+                        case "suma":
+                            this.getSuma();
+                            break;
+                        case "resta":
+                            this.getResta();
+                        case "multiplicacion":
+                            this.getMultiplicacion();
+                            break;
+                        case "division":
+                            this.getDivision();
+                            break;
+                    } 
+                }
+                
+                Calculadora.prototype.getSuma = function() {
+                    calculo = this.num1 + this.num2;
+                    document.write(calculo);
+                }
+                
+                Calculadora.prototype.getResta = function() {
+                    calculo = this.num1 - this.num2;
+                    document.write(calculo);
+                }
+                
+                Calculadora.prototype.getMultiplicacion = function() {
+                    calculo = this.num1 * this.num2;
+                    document.write(calculo);
+                }
+                
+                Calculadora.prototype.getDivision = function() {
+                    calculo = this.num1 / this.num2;
+                    document.write(calculo);
+                }
+                
+                //Mi aplicacion
+                
+                function MiAplicacion() {
+                    
+                }
+                
+                MiAplicacion.prototype.iniciar = function() {
+                          this.preguntar();
+                   }
+                
+                MiAplicacion.prototype.preguntar = function() {
+                    this.pregunta = prompt("¿Que tipo de operacion vas a utilizar? Ej: escribir o calculadora").toLowerCase();
+                    
+                    switch(this.pregunta){
+                            case"escribir":
+                            this.pregunta1 = prompt("Escribe aqui lo que quieras escribir en el documento");
+                            this.polimorfismo = new Escribir(this.pregunta1);
+                            break;
+                            
+                        case "calculadora":
+                            this.num1 = prompt("Escribe el primer número");
+                            this.num2 = prompt("Escribe el segundo número");
+                            this.calc = prompt("Escribe el tipo de operación. Ej:suma/resta/multiplicacion/division");
+                            this.polimorfismo = new calculadora(this.num1, this.num2, this.calc);
+                            break;
+                    }
+                    this.polimorfismo.ejecuta();
+                }
+                
+                
+            </script>
+        </p>
+    </section>
+</body>
+</html>

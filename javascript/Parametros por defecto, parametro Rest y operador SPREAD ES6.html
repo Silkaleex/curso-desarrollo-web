@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parametros por defecto, parametro REST y operador SPREAD ES6</title>
+</head>
+<body>
+  
+   <div id="resultado"></div>
+   
+    <script>
+        
+        var resultado = document.getElementById("resultado");
+        
+        function saludo2( mensaje ) {
+            
+            mensaje = typeof mensaje !== 'undefined' ? mensaje : 'Hola mundo';
+            
+            return mensaje;
+            
+        }
+        
+        
+        let saludo = ( mensaje = "Hola Mundo" )  => mensaje;
+        
+        resultado.innerHTML = saludo("Hola que tal");
+        
+        
+        function test( texto = "otro",...a ) {
+                     
+        console.log(a);
+        
+        for ( let valor of a ) {
+            
+          console.log(valor);  
+            
+        }
+    }
+        test( 5, "hola", true, 7, false, "mundo" );
+       //texto: 5, a:"Hola", true, 7, false, "mundo );     
+      
+        
+        function foo( a, b, c, d ){
+           console.log( a );
+           console.log( b );
+           console.log( c );
+           console.log( d );
+        }
+        
+        foo(5, "hola", true);
+        
+        let frutas = [
+            "Manzana",
+            "Pera",
+            "Durazno",
+            "Melocotón"
+        ];
+       
+        let coches = [
+            "Chevrolet",
+            "Audi",
+            "Renault"
+        ];
+        
+        foo(...frutas);
+        foo( [ ...frutas, ...coches ] );
+        
+    </script>
+</body>
+</html>   

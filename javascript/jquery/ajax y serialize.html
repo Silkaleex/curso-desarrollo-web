@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax y serialize</title>
+    <style>
+        body{
+            padding: 10px;
+            margin: 0 auto;
+            text-align: center;
+     
+        }
+      
+        h3{
+            font-size: 25px;
+            font-family: cursive;
+        }
+        
+        legend{
+            font-size: 20px;
+            font-family: cursive;
+        }
+        
+        div{
+            display:flex;
+            flex-direction: column;
+            width: 300px;
+            height: 10px;
+            margin-left: 42%;
+        }
+        
+        input{
+            text-align: left;
+            border: 5px solid black;
+            color: black;
+            font-size: 20px;
+            font-family: cursive;
+            background-color:darkgray;
+        }
+        
+       
+        
+        .grupo{
+            width: 300px;
+            height: 10px;
+            text-align: center;
+            margin-left: 42%;
+            
+        }
+      
+        .botonPrincipal{
+            border: 5px solid black;
+            font-size: 20px;
+            background-color:darkgray;
+        }
+        
+    </style>
+</head>
+<body>
+   
+    <h3>Jquery</h3>
+    
+    <br>
+    
+    <form action="" method="">
+       
+        <br>
+        
+        <legend>Metodo Ajax</legend>
+        
+       <br><br>
+       
+        <div class="grupo">
+            <input type="text" id="coche" class="forma" placeholder="coche">
+        </div>
+        
+        <br><br>
+        
+        <div class="grupo">
+            <input type="text" id="modelo" class="forma" placeholder="modelo">
+        </div>
+        
+        <br><br>
+        
+        <div class="grupo">
+            <input type="text" id="color" class="forma" placeholder="color">
+        </div>
+
+        <img src="carga.png" alt="cargando">
+    
+        <div>
+            <button id="boton" type="button" class="botonPrincipal">Obtener Datos</button>
+        </div>
+      
+        <br>
+      
+    </form>
+    
+    <div class="informacion"></div>
+    
+     <script src="jquery-3.6.0.min.js"></script>
+    <script src="ajax%20y%20serialize.js"></script>  
+</body>
+</html>

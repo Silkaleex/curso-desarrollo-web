@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase predefinida History</title>
+    <style>
+        body{
+            background-color: #d4ff1f;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+        
+        section{
+            background-color: #c17d00;
+            border: 5px groove #830000;
+            height: auto;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+            color:#2c2929;
+            margin: 0 auto;
+        }
+        
+        button{
+            padding:6px 10px;
+        }
+        
+        .num {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #fffa86;
+            padding: 4px 10px;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Pagina 1</h1>
+        <button class="btn btn-primary" onclick="aAtras()">Atras</button>
+        <button class="btn btn-primary" onclick="adelante()">Adelante</button>
+        <br><br>
+        <form action="">
+            <div class="input-group col-xs-4">
+                <input id="valor" type="text" class="form-control" placeholder="Ingresar Numero">
+                <span class="input-group-btn">
+                    <button id="btn_ir" type="button" class="btn btn-default">Ir</button>
+                </span>
+            </div>
+        </form>
+        <script>
+           
+            function write(arg) {
+                document.write(arg+"<br><br>");
+            }
+            write("<p>Numero de URL en la lista del historial<span class='num'>" + history.lenght + "</span></p>")
+            
+            function atras() {
+                history.back()
+            }
+            function adelante() {
+                history.forward()
+            }
+            
+            var btn_ir = document.getElementById('btn_ir');
+            
+            function = lanzador() {
+                var valor = document.getElementById('valor').value;
+                
+                function ir(num) {
+                    history.go(num);
+                }
+                ir(valor);
+            }
+            btn_ir.addEventListener('click', lanzador);
+        </script>
+    </section>
+</body>
+</html>

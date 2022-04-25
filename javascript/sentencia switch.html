@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentencia switch</title>
+    <style>
+    
+    body{
+        background-color: aquamarine;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-top: 100px;
+    }
+    
+    section{
+        background-color: white;
+        border: 10px groove green;
+        height: 500px;
+        width: 500px;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: darkseagreen;
+    }
+    h1{
+       text-align: center;
+        font-size: 40px;
+        font-family: monospace;
+        color: darkblue;
+        background-color: cadetblue;
+    }
+        
+    </style>
+</head>
+<body>
+    <section>
+      <h1>El Resultado de la operacion es:</h1>
+       <script>
+        var numero1 = prompt("introduce el primer numero");
+        var numero2 = prompt("introduce el segundo numero");
+        
+
+        
+        document.write("<p>");
+        
+         
+        if ( !isNaN(numero1) && !isNaN(numero2) ) {
+            
+        var operacion = prompt("¿Que tipo de operacion deseas realizar(suma/resta/multiplicacion/division)").toLowerCase();
+ 
+            switch( operacion ) {
+                    
+                case "suma":
+                    
+                document.write(parseInt(numero1) + parseInt(numero2));  break;
+                
+                case "resta":
+                    
+                document.write(parseInt(numero1) - parseInt(numero2));  break;
+                
+                case "multiplicacion":
+                    
+                document.write(parseInt(numero1) * parseInt(numero2));  break;
+                
+                case "division":
+                    
+                document.write(parseInt(numero1) / parseInt(numero2));  break;
+                    
+                default:
+                    
+                alert("por favor escriba bien el texto de la operacion descrito anteriormente, todo en minusculas")
+                    break;
+            }
+            
+        }else{
+            if(typeof(numero1) == "string" || typeof(numero2) == "string" ){
+                alert("Has introducido texto o cadena de texto, en vez de numero");
+            }else{
+                alert("Error no identificado");
+            }
+        }    
+            
+        document.write("</p>");
+        
+        </script>
+    </section>         
+</body>
+</html>

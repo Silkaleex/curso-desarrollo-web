@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+
+body{
+    background-color: brown;
+}
+
+article{
+    margin: 50px;
+    padding: 15px;
+    background-color: cornsilk;
+    -webkkit-column-count: 3;
+    column-count: 3;
+    column-gap: 30px;
+    -webkit-column-rule-width: 10px; 
+    -webkit-column-rule-color: blue; 
+    -webkit-column-rule-style: dashed; 
+
+}
+
+img{
+    margin: 15px 0;
+    max-width: 100%;
+}
+
+p{
+    margin: 10px 0;
+}
+
+h1{
+    -webkit-column-span:all;
+    text-align: center;
+    margin: 10px 0;
+}

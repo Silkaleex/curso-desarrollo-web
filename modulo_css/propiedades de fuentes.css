@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0px;
+    font-family: Helvetica, sans-serif;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+    font-size:20px ;
+    font-variant:small-caps;
+     
+}
+
+h2{
+    text-shadow: 5px 5px 4px green;
+}
+
+

@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    font-family: Helvetica, sans-serif;
+}
+
+ol,ul{
+    list-style-position: outside;
+    list-style: initial;
+    list-style-image: url(imagen/R4d5f05b81b27c0114e73f2fbd1c46a94.jpg);
+}
+
+li{
+    border: 1px solid blue;
+    padding: 5px;
+    
+}

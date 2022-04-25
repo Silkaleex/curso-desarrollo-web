@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase predefinida Number</title>
+        <style>
+        body{
+            background-color: #0000ff;
+            font-family: inherit;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+            
+        }
+        section{
+            background-color:  #0093ff;
+            border: 10px groove #00ff6c;
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+            color:white;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <script>
+        function write (arg) {
+            document.write(arg+"<br>");
+        }
+            var a = new Number(); //0
+            var b = new Number(8); //inicia el objeto con el numero
+            var c = new Number("tres"); //Nan
+            var d = new Number(true); //1
+            var e = new Number(false); //0
+            
+            var num1 = new Number("5"); //Lo convertire a dato numerico
+            var num2 = 7;
+            
+            write(a);
+            write(b);
+            write(c);
+            write(d);
+            write(e);
+            write(num1+num2)
+            /*
+                . Nan: Not a number(No es un numero).
+                .Max_value y Min_value: Maximo y Minimo el valor que se puede representar.
+                .Negative_Infinity y Positive Infinity:
+                Representan los valores, negativos y positivos respectivamente, a partir de los cuales hay desbordamiento.
+                .Estas propiedades son de clase. Se accede a ellas a partir del nombre de la clase*/
+        </script>
+    </section>
+</body>
+</html>

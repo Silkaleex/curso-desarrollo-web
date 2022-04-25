@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>querySelector - querySelectorAll</title>
+    <style>
+        body{
+            background-color: #2929ff;
+            margin:0 auto;
+            padding:0;
+          
+        }
+        div{
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            border: 15px groove blue;
+            background-color: cornflowerblue;
+            font-size: 40px;
+            font-family: fantasy;
+            font-weight: bold;
+            
+        }
+        
+        #caja-principal {
+          background-color: white;
+          width: 600px;
+          height: auto;
+          padding-top: 10px;
+          padding-bottom: 10px;
+    
+        }
+        
+        .caja1,
+        .caja2 {
+            width: 200px;
+            height: auto;
+            background-color: #c2f5f3;
+            border: 10px groove #006a6a;
+            
+        }
+        
+        #caja-principal .caja2 h2{
+            color:#8b008b;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja-principal">
+        <h1>Titulo 1</h1>
+        
+        <div class="caja1" title="caja-inicial">
+        <h2>Titulo 2</h2>
+        </div>
+        <br>
+        <div class="caja2">
+        <h2>Titulo 3</h2>
+        <h2>Texto</h2>
+        </div>
+    </div>
+    <br>
+    
+    <script>
+    
+        var cualquiera = document.querySelector("div");
+        
+        cualquiera.style.backgroundColor = "aquamarine";
+        
+         var cualquiera = document.querySelector(".caja1");
+        
+        cualquiera.style.border = "10px groove green";
+        
+         var cualquiera = document.querySelector("#caja-principal");
+        
+        cualquiera.style.border = "5px solid yellow";
+        
+        var cualquiera = document.querySelector("#caja-principal");
+        
+        cualquiera.style.padding = "50px";
+        
+        var cualquiera = document.querySelectorAll("#caja-principal .caja2 h2")[1];
+        cualquiera.style.color = "green";
+        
+        var cualquiera = document.querySelector("[title=caja-inicial] ");
+        cualquiera.style.backgroundColor = "greenyellow";
+        
+        var cualquiera = document.querySelectorAll(" #caja-principal > * ")[3];
+        
+        cualquiera.style.backgroundColor = "orange";
+        
+        var cualquiera = document.querySelectorAll(" [class^=caja], h1 ");
+        
+        for( x in cualquiera ) {
+            cualquiera[x].style.borderRadius = "50px";
+        }
+        
+    </script>
+</body>
+</html>

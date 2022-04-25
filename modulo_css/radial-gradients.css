@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: red;
+}
+
+.degradado-radial{
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    border-radius: 50%;
+    background: radial-gradient( circle at 30% 50%, red, 25%, black 25%);
+    -webkit-filter: blur(2px);
+}

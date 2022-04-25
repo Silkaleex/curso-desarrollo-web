@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clase Predefinida string</title>
+    <style>
+        body{
+            background-color: #ffba00;
+            font-family: inherit;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+            
+        }
+        section{
+            background-color: #a7ff00;
+            border: 10px groove #ff5800;
+            height: 400px;
+            width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+            color:black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <script>
+        function write (arg) {
+            document.write(arg+"<br>");
+        }
+            var cadena = " Esto es una cadena ";
+            var obj_cadena = new String("Esto es una cadena");
+            write(cadena);
+            write(cadena.charAt(13));
+            write(cadena.lenght);
+            write(cadena.indexOf('una', 5));
+            write(cadena.lastIndexOf('cadena', 15));
+            write(cadena.replace('cadena', 'nueva cadena'));
+            
+            var convertido_array = cadena.split(' ' )
+            write(convertido_array);
+            write(convertido_array[3]);
+            write(cadena.substring(5, 15));
+            write(cadena.trim());
+            write(cadena.toLocaleLowerCase());
+            write(cadena.toUpperCase());
+            write(cadena.strike());
+            write(cadena.sup());
+            write(cadena.sub());
+            write(cadena.anchor("nombre_atributo_name"));
+            write(cadena.link("https://www.google.com"));
+            
+            var num1 = 5, num2 = 5;
+            write(num1+num2)
+            num1 = num1.toString();
+            write(num1+num2)
+        </script>
+    </section>
+</body>
+</html>

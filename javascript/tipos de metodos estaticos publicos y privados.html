@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de metodos estaticos publicos y privados</title>
+</head>
+<body>
+    <section>
+        <p>
+            <script>
+                
+            function write(arg) {
+                document.write(arg+"<br><br>")
+            }
+                function Persona( nombre, edad ) {
+                    var anio = new Date();
+                    var calculo;
+                    
+                    this.nombre = nombre;
+                    this.edad = edad;
+                    
+                    //Métodos Públicos
+                    //Manera 1 menos recomendada de usar
+//                    this.calcularNacimiento = function(edad) {
+//                        calculo = anio.getFullYear() - edad;
+//                        write( calculo );
+//                    }
+//                }
+                
+                //Métodos Estáticos
+//                Persona.calcularFechaNacimiento =        function( edad ) {
+//                    var anio = new Date();
+//                    var calculo = anio.getFullYear() - edad;
+//                    write(calculo);
+//                }
+//                Persona.calcularFechaNacimiento( 26 );
+                
+                var yo = new Persona( "Silkaleex", 26 );
+                
+//                yo.calcularNacimiento( 26 );
+                    
+                    //Metodo Publico, Manera 2
+                    Persona.prototype.saludar = function(nombre) {
+                        write( "Hola "+ this.nombre + " te saluda " + nombre );
+                    }
+                yo.saludar( "Manolo" );
+               
+                    //metodos privados
+                    
+                    function decirHola(){
+                        write( "Hola" );
+                    }
+                    
+                    Persona.prototype.ejecutarPrivados = function() {
+                        decirHola();
+                        }
+                    
+                    var yo = new Persona( "Silkaleex", 26 );
+                    
+                    yo.ejecutarPrivados();
+                    
+            </script>
+        </p>
+    </section>
+</body>
+</html>

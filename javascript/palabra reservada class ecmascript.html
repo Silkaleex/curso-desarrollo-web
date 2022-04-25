@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palabra Reservada class Ecmascript</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: darkturquoise;
+            
+        }
+        section{
+            margin: 0 auto;
+            margin-top:10 0px;
+            border: 10px solid black;
+            width: 300px;
+            height: auto;
+            background-color: cadetblue;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;   
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <script>
+            function escribir(e){
+                document.write(e + "<br><br>");
+            }
+            
+            function miObjeto(arg) {
+                //constructor
+                this.arg=arg;
+                //Propiedad
+            }
+            
+            miObjeto.prototype.getObjeto = function() {
+                //metodo
+                escribir(this.arg);
+            }
+            
+            var obj = new miObjeto("Hola");//Instancianjdo
+            
+            obj.getObjeto();
+            
+            function objetoDos(x) {
+                //Utilizando el constructor del objeto padre
+                miObjeto.call(this, x);
+                //Superclase
+            }
+            
+            objetoDos.prototype = new miObjeto();
+            //Herencia
+            
+            var obj2 = new objetoDos("Que tal");
+            //Instancia del segundo objeto
+            obj2.getObjeto();
+            //Forma clásica de clásicos con la última versión de ECMAScript 6 "ES6"
+            
+            (function() {
+                'use strict';
+                
+                class Persona {
+                    constructor(nombre,edad){
+                        this.nombre=nombre;
+                        this.edad=edad;
+                    }
+                    
+                    getNombre(){
+                        escribir(this.nombre);
+                    }
+                    
+                    getEdad(){
+                        escribir(this.edad);
+                    }
+                    
+                    setNombre(x){
+                        this.nombre=x;
+                    }
+                    
+                    setEdad(z){
+                        this.edad=z;
+                    }
+                }
+                
+                var yo = new Persona("Alejandro", 26);
+                yo.getNombre();
+                yo.getEdad();
+                
+                yo.setNombre("Manolo");
+                yo.setEdad(50);
+                
+                yo.getNombre();
+                yo.getEdad();
+                
+                class Robot extends Persona{
+                    
+                    constructor(x,z) {
+                        super(x,z);
+                        this.prop1="Cualquier Cosa";
+                    }
+                    
+                    saludar(){
+                        escribir( "Hola, " + this.nombre )
+                    }
+                    saludar2() {
+                        super.getNombre();
+                    }
+                }
+                
+                var tu = new Robot("Ramon");
+                
+                tu.getNombre();
+                
+                tu.saludar();
+                
+                tu.setNombre("Juan Carlos");
+                
+                tu.saludar2();
+                
+                escribir( tu.prop1 )
+            })();
+            
+        </script>
+    </section>
+</body>
+</html>

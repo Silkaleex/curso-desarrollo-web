@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase Predefinida Document</title>
+    <style>
+       body{
+            background-color: #c62222;
+        }
+        
+        section{
+            border:10px groove #ce0808;
+            padding: 10px;
+            padding-top: 30px;
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 600px;
+            height: auto;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            font-family: monospace;
+            background-color: #f57344;   
+        }
+        
+        h1{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        p{
+            text-align: center;
+            align-items: center;
+            font-size:30px;
+            font-weight: bold;
+        }
+        button{
+            padding: 10px 20px;
+            margin-top: 70px;
+        }
+        div{
+            background-color: darkkhaki;
+            padding:8px;
+            text-align: center;
+        }
+        
+        .predefinido{
+            color:green;
+            font-size:50px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+      
+       <pre>
+       
+       <a name="Enlace 1" href="#inicio">Esto es un enlace</a><br>
+       <h1>Hola Mundo!</h1>
+       <button id="boton1" onclick="crearBoton()">Click</button>
+       <button id="boton1" onclick="crearAtributo()">Agregar Atributo</button><br><br>
+       
+       <form action="codigo.php" method="post">
+           <input name="input1" type="text" value="Input 1"><br>
+           <input name="input2" type="text" value="Input 2"><br>
+           <input name="input3" type="text" value="Input 3"><br>
+       </form>
+       
+        <script>
+        
+            function write(arg) {
+                document.write(arg+"<br><br>")
+            }
+            
+            write(document.title);
+            write(document.anchors[0].name);
+            write(document.forms[0].elements[2].value);
+            
+            document.writeln("Hola");
+            document.writeln("Hola");
+            document.writeln("Hola");
+
+            function crearBoton() {
+                var btn = document.createElement("button");
+                var comentario = document.createComment("esto es un comentario")
+                document.getElementsByTagName('section')[0].appendChild(comentario);
+            }
+            function crearAtributo() {
+                var h1 = document.getElementsByName("h1")[0];
+                var atr = document.createAttribute("class");
+                atr.value = "predefinido";
+                h1.setAttributeNode(atr);
+            }
+            document.querySelectorAll()
+
+        </script>
+        <script></script>
+        <script> write(document.scripts.length);</script>
+        </pre>
+    </section>
+</body>
+</html>   

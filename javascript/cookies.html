@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookies</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            margin: 0 auto;
+            margin-top: 200px;
+            padding: 50px;
+            border: 10px dashed black;
+            width: 300px;
+            text-align: center;
+            background-color: #d21e9b;
+            
+        }
+        section:hover{
+            background-color: #ba00ff;
+            font-size: 20px;
+            font-family: monospace;
+            font-weight: lighter;
+            border-radius: 50px;
+        }
+        
+        select:hover{
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        
+        button:hover{
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+        }
+          
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Cambiar el color de fondo</h1>
+        
+        <form>
+           
+            <select name="colorFondo" id="colorFondo" class="form-control" required>
+                <option value="">Seleccione un color</option>
+                <option value="red">Rojo</option>
+                <option value="blue">Azul</option>
+                <option value="green">Verde</option>
+                <option value="yellow">Amarillo</option>
+            </select>
+            
+        </form>
+        
+        <br>
+        
+        <button class="btn btn-default" id="borrar">Borrar Cookie</button>
+        
+    </section>
+    
+    <script>
+        
+        var cookies = document.cookie;
+        var colorfondo = document.getElementById('colorFondo');
+        var body = document.body;
+        var borrar = document.getElementById('borrar');
+        
+        function guardarCookie( nombre, valor, dia_c ) {
+            
+            var f = new Date();
+            
+            f.setTime( f.getTime() + ( dia_c*24*60*60*1000 ) );
+            
+            var caduca = 'expires=' + f.toUTCString();
+            
+            document.cookie = nombre+'='+valor+caduca;
+        }
+        
+        function cambiarColor() {
+            body.style.backgroundColor = colorFondo.value;
+            guardarCookie( 'fondo', colorFondo.value, 365 )
+        }
+        
+        function leerCookie( nombre ) {
+            var listaC = cookies.split(';');
+            for( i in listaC ) {
+                var busca = listaC[i].search(nombre);
+                if( busca > -1 ) {
+                    var fondo = listaC[i];
+                    var igual = fondo.indexOf('=');
+                    var valor = fondo.substring(igual+1);
+                }
+            }
+            body.style.backgroundColor = valor;
+        }
+        
+        function borrarCookie(){
+            document.cookie = 'fondo=ww;expires=31 may 1990 23:59:59 GMT';
+            setTimeout( function () {
+                location.reload();
+            });
+        }
+        
+        leerCookie('fondo');
+        colorFondo.addEventListener('change', cambiarColor);
+        borrar.addEventListener('click', borrarCookie);
+        
+    </script>
+</body>
+</html>

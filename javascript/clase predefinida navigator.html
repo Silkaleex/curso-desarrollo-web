@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase predefinida Navigator</title>
+        <style>
+        body{
+            background-color: #c1c4b3;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+        
+        section{
+            background-color: #3c3526;
+            border: 5px groove #830000;
+            height: auto;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+            color:#000000;
+            margin: 0 auto;
+        }
+        
+        button{
+            padding:6px 10px;
+            background-color: darkred;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        
+        .num {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #fffa86;
+            padding: 4px 10px;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+       <h1>Da click para saber tu geoposicion</h1>
+       <button id="boton" class="btn btn-primary">Posicion</button>
+        <script>
+          function write(arg) {
+              document.write(arg+"<br><br>");
+          }
+            
+            write("")
+            
+            write( navigator.appCodeName );
+            write( navigator.appName );
+            write( navigator.appVersion );
+            write( navigator.cookieEnabled );
+            write( navigator.geolocation );
+            write( navigator.online );
+            write( navigator.language );
+            write( navigator.platform );
+            write( navigator.product );
+            write( navigator.userAgent );
+            
+            write( navigator.javaEnabled() );
+            
+            var boton = document.getElementById('boton');
+            function geoPosition() {
+                if ( navigator.geolocation ) {
+                    navigator.geolocation.getCurrentPosition(mostrarPosicion);
+                }else{
+                    alert("Este navegador no soporta la Geoposicion")
+                }
+            }
+            
+            function mostrarPosicion(posicion) {
+                alert("latitud: "+ posicion.coords.latitude + "longitud: "+posicion.coords.longitude)
+            }
+            
+            boton.addEventListener('click', geoPosition);
+            
+        </script>
+        
+    </section>
+</body>
+</html>

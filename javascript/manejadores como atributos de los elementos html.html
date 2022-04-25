@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manejadores como atributos de los elementos html</title>
+    <style>
+    
+        body{
+            background-color: darkviolet;
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+        
+        section{
+            background-color: darkgreen;
+            border:5px groove black;
+            height: auto;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+<body onload="alert('La pagina se cargo completamente')">
+    
+    <section onmouseout="alert('Has salido de la etiqueta o elemento section')">
+       
+        <h1 onmouseover="alert('Has pasado o puesto el mouse encima')">Manejadores de eventos</h1>
+        
+        <ul>
+            <li>manejadores de eventos como atributos de los elementos html</li>
+            <li>manjeadores como funciones JavasCript externas</li>
+            <li>manejadores "semánticos"</li>
+        </ul>
+        <br>
+        <button onclick="alert('Me has presionado')">Presioname</button>
+    </section>
+    <section style="height: 300px">
+       
+        <input type="text" value="" onfocus="value='tengo el foco';style.backgroundColor='Yellow'" onblur="value='He perdido el foco';style.backgroundColor='red'">
+        
+    </section>
+    <script>
+        
+    </script>
+</body>
+</html>

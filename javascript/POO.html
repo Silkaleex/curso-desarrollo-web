@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POO</title>
+    <style>
+        
+        body{
+            background-color: dodgerblue;
+            font-family: inherit;
+            margin: 0;
+            padding: 0;
+            padding-top:10px;
+        }
+        
+        #objeto1{
+            background-color: azure;
+            border: 15px groove blue;
+            height: 500px;
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 10px;   
+        }
+    </style>
+</head>
+<body>
+  <section id="objeto1">
+  
+  <button></button>
+ 
+      <script>
+      
+          var objeto1 = document.getElementById("objeto1");
+          
+          objeto1.style.backgroundColor = "aqua"
+          
+          objeto1.style.width = "200px";
+          
+          objeto1.style.height = "100px";
+          
+          objeto1.style.border = "1px solid black"
+          
+          var boton = document.getElementsByTagName("button")[0];
+          
+          boton.style.width = "70px";
+          boton.style.height = "30px";
+          boton.innerHTML = "Enviar";
+      </script>
+     </section> 
+</body>
+</html>

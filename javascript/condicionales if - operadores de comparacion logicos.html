@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Condicional If y else - Operadores de comparacion y lógicos.</title>
+</head>
+<style>
+
+    body{
+        background-color: aquamarine;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        padding-top: 100px;
+    }
+    
+    section{
+        background-color: white;
+        border: 10px groove green;
+        height: 500px;
+        width: 500px;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: darkseagreen;
+    }
+    h1{
+       text-align: center;
+        font-size: 40px;
+        font-family: monospace;
+        color: darkblue;
+        background-color: cadetblue;
+    }
+</style>
+<body>
+  <section>
+      <h1>El resultado de la operacion</h1>
+    <script>
+    
+        var precioHelado = 5;
+       //ejemplo 1 
+        var miDinero = prompt("¿Cuanto dinero tienes para comprarte un helado?");
+        
+        if ( miDinero >= precioHelado ) {
+            alert("Si puedes comparte el helado, Disfrutalo!");
+        }
+        
+        alert("continua el flujo de ejecución del programa");
+       //ejemplo 2
+        
+        var numero1 = 3;
+        var numero2 = "3";
+        
+        if( numero1 !== numero2){
+            alert("Los dos numeros son iguales porque son el mismo tipo de dato y su interior es identico");
+            
+            alert("continua el flujo de ejecución del programa");
+        } 
+        
+        else{
+            alert("los dos numeros no son iguales, porque tienen diferentes tipos de datos")
+        }   
+        //ejemplo 3
+        
+        var b = false;
+        
+         if( !b ){
+            alert("Es ejecutado porque es True");
+        } 
+        
+        else{
+            alert("Es ejecutado por que es Falso")
+        }
+            
+         
+            alert("continua el flujo de ejecución del programa");
+        //ejemplo 4
+        
+        var miDinero = prompt("¿Cuanto tienes?");
+        
+        var dia = prompt("¿Cuanto dinero tienes para comprar el chocolate?");
+        
+        if( miDinero >= 50 || dia >= 1 ){
+            alert("Si tienes dinero puedes comprarlo disfrutalo");
+        }
+        else{
+            alert("No tienes dinero, ahorra y tendras tu chocolate ");
+        }
+        
+        alert("Continua el flujo de ejecucion del programa");
+        
+        //ejemplo 5
+        var a = true;
+        var b = false;
+        if ( a ^ b ){
+            ("condicional verdadero");
+        }
+        
+        else{
+            alert("No se cumplio la condición");
+        }
+        
+          alert("Continua el flujo de ejecucion del programa");
+        //ejemplo 6 sintaxis multiple
+        
+        var numero1 = prompt("introduce el primer numero");
+        
+        var numero2 = prompt("introduce el segundo numero");
+        
+        var operacion = prompt("¿Que tipo de operacion deseas realizar(suma/resta/multiplicacion/division)").toLowerCase();
+        
+        document.write("<p>");
+        if( operacion == "suma"){
+            document.write(parseInt(numero1) + parseInt(numero2));
+            
+        } else if ( operacion == "multiplicacion" ){
+           document.write(parseInt(numero1) * parseInt(numero2));  
+        } else if ( operacion == "resta"){
+            document.write(parseInt(numero1) - parseInt(numero2));
+            
+        } else if ( operacion == "division"){
+            document.write(parseInt(numero1) / parseInt(numero2));
+            
+        }
+        else{
+            alert("por favor escriba bien el texto de la operacion descrito anteriormente, todo en minusculas")
+        }
+        document.write("<p>");
+        
+        
+    </script>
+    
+  </section>  
+</body>
+</html>

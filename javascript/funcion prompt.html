@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funcion Prompt</title>
+    <style>
+    
+        body{
+            background-color: aquamarine;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+        
+        #resultados{
+            padding: 20px;
+            width: 500px;
+            height: 400px;
+            background-color: #00ffba;
+            margin: 0 auto;
+            border: 2px solid black;
+        }
+        
+        h1{
+            font-family: sans-serif;
+            font-size: 30px;
+            color: green;
+        }
+        
+        p{
+            font-size: 15px;
+            color: darkblue;
+            font-weight: bold
+        }
+    </style>
+    <script>
+        //ejemplo 1
+    var n = prompt("¿Como te llamas?");
+        
+      document.write(n);
+        //ejemplo 2
+        
+        var numero1, numero2, total;
+        //Multiplicamos
+        numero1 = prompt("ingresa el primer numero");
+        numero2 = prompt("ingresa el segundo numero");
+        total = numero1 * numero2;
+        //Dividimos
+         numero1 = prompt("ingresa el primer numero");
+        numero2 = prompt("ingresa el segundo numero");
+        total = numero1 / numero2;
+        //resta
+         numero1 = prompt("ingresa el primer numero");
+        numero2 = prompt("ingresa el segundo numero");
+        total = numero1 - numero2;
+        //suma
+        numero1 = prompt("ingresa el primer numero");
+        numero2 = prompt("ingresa el segundo numero");
+        total = numero1 + numero2;
+        
+    </script>
+</head>
+<body>
+    <section id="resultados">
+        <h1>Operacion Matemática:</h1>
+        <p>4 x 5 <b>=</b> <em>20</em></p>
+        
+        <script>     
+    //Multiplicacion    
+    document.write("<p>");  
+    document.write(numero1 + " x " + numero2 + " <b> = </b>" +  "<em>" + total + "</em>");       
+    document.write("</p>");
+            
+    //Division
+    document.write("<p>");         
+    document.write(numero1 + " / " + numero2 + " <b> = </b>" +  "<em>" + total + "</em>");      
+    document.write("</p>");    
+    
+    //suma        
+    document.write("<p>");       
+    document.write(numero1 + " + " + numero2 + " <b> = </b>" +  "<em>" + total + "</em>");      
+    document.write("</p>"); 
+     
+    //resta        
+    document.write("<p>");       
+    document.write(numero1 + " - " + numero2 + " <b> = </b>" +  "<em>" + total + "</em>");      
+    document.write("</p>"); 
+        </script>
+        
+        <h1>Nombre Completo</h1>
+        <script>    
+    var nombre = prompt("Ingresa tu nombre");
+    var apellido = prompt("ingresa tu apellido");       
+    document.write("<p>");         
+    document.write(nombre + "<b>" + apellido);        
+    document.write("</p>");       
+        </script>
+    </section>
+</body>
+</html>

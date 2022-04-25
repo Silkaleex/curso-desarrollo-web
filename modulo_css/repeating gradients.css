@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.repeating{
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    background: repeating-linear-gradient( to top left,red,black 50px,green 100px),repeating-linear-gradient(to bottom left, blue, yellow 50px);
+}
+.repeating2{
+     width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    background: repeating-radial-gradient(violet ,black 50px) 
+}
+
+.repeating3{
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background: repeating-linear-gradient(to top left, green, yellow 20px)
+}

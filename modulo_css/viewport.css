@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html{
+    font-size: 30px;
+}
+
+.caja1{
+    background-color: blue;
+    height: 150px;
+    width: 50vw;
+}
+
+.caja2{
+    background-color: crimson;
+    width: 100px;
+    height: 50vh
+}

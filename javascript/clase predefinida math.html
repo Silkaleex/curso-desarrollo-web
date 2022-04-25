@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase predefinida math</title>
+        <style>
+       body{
+            background-color: #ff0000;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            padding-top: 200px;
+        }
+        section{
+            padding: 20px;
+            padding-top: 20px;
+            width: 300px;
+            height: auto;
+            background-color: #c4ff00;
+            margin: 0 auto;
+            border: 15px groove #ffb100;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <script>
+        function write (arg) {
+            document.write(arg+"<br><br>")
+        }
+            //Propiedades
+            write("propiedades------------>");
+  
+            write( Math.LOG10E );
+            write( Math.LOG2E );
+            write( Math.PI );
+            write( Math.SQRT1_2 );
+            write( Math.SQRT2 );
+            
+            //Metodos
+            write("Metodos---------------->");
+            
+            write( Math.ceil(5.3) );
+            write( Math.floor(5.3) );
+            write( Math.round(5.3) );
+            write( Math.max(8, 19) );
+            write( Math.min(5, 9) );
+            write( Math.pow(2, 5) );
+            write( Math.random() );
+            write( Math.sqrt(9) );
+            
+        </script>
+    </section>
+</body>
+</html>

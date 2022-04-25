@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Propiedades estaticas,publicas y privadas</title>
+    <style>
+        body{
+            background-color:darkorange;
+            font-size: 35px;
+            font-weight: bold;
+            color: yellow;
+        }
+        section{
+            align-content: center;
+            padding-top: 50px;
+            margin: 0 auto;
+            margin-top: 100px;
+            width: 500px;
+            height: auto;
+            background-color: darkred;
+            border:10px solid red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p>
+            <script>
+                function write(arg) {
+                    document.write(arg+"<br><br>")
+                }
+                
+                function Persona(){
+                    this.nombre = "Pepita";
+                    this.edad = "21";
+                    
+                    //Propiedad Privada
+                    var pais = "España";
+                    
+                    this.p = pais;
+                    
+                    //.p Propiedad publica es la unica manera de acceder a una propiedad privada
+                }
+                
+                //Propiedades Estaticas
+                
+                Persona.NOMBRE = "Silkaleex";
+                
+                var yo = new Persona();
+                
+                write( Math.PI )
+                
+                write( Persona.NOMBRE );
+                
+                write(yo.NOMBRE);
+                
+               //Propiedades Publicas
+                
+               write( yo.nombre );
+               write( yo.edad );
+                
+                yo.nombre = "Silkaleex";
+                 
+                var tu = new Persona();
+                
+                tu.nombre = "Estefania";
+                
+                
+                write( yo.nombre );
+                write( tu.nombre );
+                write( yo.p );
+                
+                //Propiedades Privadas(No se recomienda usar esta propiedad)
+                  write( yo.nombre );
+                
+                
+            </script>
+        </p>
+    </section>
+</body>
+</html>

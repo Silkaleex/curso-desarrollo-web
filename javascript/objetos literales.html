@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos Literales</title>
+    <style>
+        body{
+            background-color: coral;
+            padding: 0;
+            margin: 0;
+            font-family: fantasy;
+            font-size: 25px;
+        }
+        
+        section{
+            text-align: center;
+            border: 10px groove brown;
+            background-color: chocolate;
+            padding-top: 100px;
+            padding: 20px;
+            margin: 0 auto;
+            margin-top: 100px;
+            width: 500px;
+            height: auto;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p>
+            <script>
+            function write(arg) {
+                document.write(arg+"<br><br>");
+            }
+                write("");
+                
+                var obj_literal = {
+                    nombre: "mi objeto",
+                    edad: 26,
+                    saludar: function(nombre){
+                        write("Hola "+nombre+" ¿Como Estas?");
+                },
+                    estilos: {
+                        colorFondo: "amarillo"
+                    }
+                  };
+                write( obj_literal.nombre );
+                write( obj_literal.edad );
+                
+               obj_literal.saludar("Silkaleex");
+                
+               write(obj_literal.estilos.colorFondo);
+            </script>
+        </p>
+    </section>
+</body>
+</html>

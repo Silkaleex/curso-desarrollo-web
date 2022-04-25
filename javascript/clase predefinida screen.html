@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase predefinida Screen</title>
+            <style>
+        body{
+            background-color: #c400ff;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        
+        }
+        
+        section{
+            background-color: #a70067;
+            border: 5px groove #ff0000;
+            height: auto;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        h1{
+            font-family:cursive; 
+            font-weight: 900;
+            font-size: 25px;
+            color:#52004f;
+        }
+    </style>
+</head>
+<body>
+    <section>
+      
+       <h1>Clase Predefinida Screen</h1>
+       
+        <script>
+        function write(arg) {
+            document.write(arg+"<br><br>");
+        }
+            
+            write("");
+            
+            write(screen.width);
+            write(screen.height);
+            write(screen.availWidth);
+            write(screen.availHeight);
+            write(screen.colorDepth);
+            write(screen.pixelDepth);
+
+            
+        </script>
+    </section>
+</body>
+</html>

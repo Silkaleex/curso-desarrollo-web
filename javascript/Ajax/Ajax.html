@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <style>
+    </style>
+</head>
+<body>
+   
+    <div class="contenedor">
+       
+        <div class="cuadro">
+           
+            <h3>AJAX</h3>
+            
+            <br>
+            
+            <div class="contenido"></div>
+            
+            <script>
+                
+            //ActiveXObject
+            //XMLHttpRequest
+            
+                var contenido = document.getElementById('contenido');
+                
+                if( window.XMLHttpRequest ) {
+                   ajax = new XMLHttpRequest(); 
+                } else {
+                    ajax = new ActiveXObject('Microsoft.XMLHTTP');
+                }
+                
+                function mifunctionProcesadora() {
+                    if( ajax.readyState == 4 && ajax.status == 200 ) {
+                        contenido.innerHTML = ajax.responseText.replace(/</g, "&lt;");
+                    }
+                }
+                ajax.onreadystatechange = mifunctionProcesadora;
+                  ajax.open( "GET", 'datos.html');
+                    ajax.send();
+                   
+            </script>
+            
+        </div>
+        
+    </div>
+    
+</body>
+</html>

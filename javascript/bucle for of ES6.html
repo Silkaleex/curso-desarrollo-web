@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BUcle for of ES6</title>
+</head>
+<body>
+   <div id="resultado"></div>
+    <script>
+        var resultado = document.getElementById( "resultado" );
+        
+        const arr = [
+            5, 7 , "Alejandro", true, "Pascual"
+        ];
+        
+        for( let valor of arr ) {
+            console.log( valor );
+        }
+        
+           for( let letra of "Hola" ) {
+            document.write( letra + "<br>" );
+            console.log( letra );
+        }
+        
+        function testing() {
+            for(let valor of arguments ) {
+                console.log( valor );
+                document.write( valor + "<br>");
+            }
+            for( let indice in arguments ) {
+                console.log( arguments[ indice ] );
+            }
+        }
+        
+        testing( 4, 9, "hola", "test", false);
+    </script>
+</body>
+</html>

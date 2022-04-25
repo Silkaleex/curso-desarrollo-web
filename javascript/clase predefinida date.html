@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase predefinida date</title>
+            <style>
+       body{
+            background-color: #ff0000;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            padding-top: 200px;
+        }
+        section{
+            padding: 20px;
+            padding-top: 20px;
+            width: 300px;
+            height: auto;
+            background-color: #c4ff00;
+            margin: 0 auto;
+            border: 15px groove #ffb100;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+   <section>
+       <script>
+       function write(arg) {
+           document.write(arg+"<br><br>");
+       }
+           var fecha = new Date();
+           var fecha2 = new Date(1995,1,30,16,55,55);
+           var fecha3 = new Date(1995,1,30);
+           write(fecha);
+           write(fecha2);
+           write(fecha3);
+       </script>
+   </section> 
+</body>
+</html>

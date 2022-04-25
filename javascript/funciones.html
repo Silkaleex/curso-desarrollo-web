@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funciones</title>
+    <style>
+        body{
+            background-color: blue;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+        section{
+            background-color: cyan;
+            border: 10px solid black;
+            height: 500px;
+            width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        
+        table{
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th{
+            color: cornflowerblue;
+        }
+        th, td{
+            border: 5px dashed black;
+            padding: 7px;
+        }
+        caption{
+            color: firebrick;
+            font-weight: bold;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        
+        <script>
+        
+            function saludo() {
+                alert("Hola que tal");
+                document.write("¿Como estas?<br>");
+            }
+    
+           saludo();
+            
+            function preguntar_nombre() {
+                var nombre = prompt("¿Cual es su nombre?");
+                document.write("<h1>"+nombre+"<h1>");
+            }
+            
+            preguntar_nombre();
+            preguntar_nombre(); preguntar_nombre(); preguntar_nombre(); 
+        </script>
+        
+    </section>
+</body>
+</html>

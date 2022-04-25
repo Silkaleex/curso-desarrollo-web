@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase Predefinida Array</title>
+        <style>
+         body{
+            background-color: #86ff86;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        
+        }
+        
+        section{
+            background-color: #00fff5;
+            border: 5px groove #89ff00;
+            height: auto;
+            max-width: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+   <section>
+    <script>
+    
+        function write(arg) {
+            document.write(arg+"<br><br>");
+        }
+        
+        var matriz = new Array();
+        
+        var frutas = [ "Limon", "Naranja", "Platano", "Uva", "Pera" ];
+        
+        write("");
+        
+        write(frutas.length);
+        
+        var concatenado = frutas.concat(frutas);
+        
+        write(concatenado);
+        
+        var cadena = frutas.join();
+        
+        write(cadena)
+        
+        write(cadena[0])
+        
+        write(frutas.reverse());
+        
+        write(frutas.sort());
+        
+        frutas.shift();
+        
+        write(frutas);
+        
+        frutas.pop();
+        
+        write(frutas);
+        
+        frutas.unshift("Sandía");
+        
+        write(frutas);
+        
+        frutas.push("cereza");
+        
+        write(frutas);
+        
+        write(frutas.slice(3,1));
+        
+        write(frutas.splice(2,1));
+        
+        write(frutas);
+        
+        write(frutas.toString());
+        
+      var edades = [ 5, 7, 19, 25 ];
+        
+      function revisarEdad(edad) {
+          return edad >= 18;
+      }
+        
+       if ( edades.some(revisarEdad ) ) {
+           write("Paso la Prueba");
+       } else {
+           write("No paso la prueba");
+       }
+        
+        if ( edades.every(revisarEdad) ) {
+           write("Paso la Prueba");
+        } else {
+            write("No paso la prueba")
+        }
+        
+        var filtro = edades.filter(revisarEdad);
+        
+        write(filtro)
+    //cada letra AZUL MARINO es una funcion del ARRAY y la explicacion esta en el cuaderno de cada una de ellas, solo son las que estan dentro del elemento script, css son para decorar nada mas.    
+    </script>
+</section> 
+</body>
+</html>

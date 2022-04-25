@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Metodos privilegiados Getters y Setters</title>
+    <style>
+        body{
+            background-color: darkseagreen;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: fantasy;
+            padding: 0;
+            padding-top: 100px;
+            margin: 0;
+            
+        }
+        
+        section{
+            border: 10px groove green;
+            background-color: greenyellow;
+            text-align: center;
+            width: 300px;
+            height: 400px;
+            margin: 0 auto;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+    
+    </style>
+</head>
+<body>
+    <section>
+        <p>
+            <script>
+                function write(arg) {
+                    document.write(arg+"<br><br>")
+                }
+                
+                function Persona( nombre,edad ) {
+                    this.nombre = nombre;
+                    this.edad = edad;
+                    
+                    var numero = 5;
+                    var texto = "Hola";
+                    
+                    this.getNumero = function() {
+                        return numero;
+                    }
+                    this.setNumero = function(nuevoNumero) {
+                        numero = nuevoNumero;
+                    }
+                    this.getTexto = function() {
+                        return texto;
+                    }
+                    this.setTexto = function(nuevoTexto) {
+                        texto = nuevoTexto;
+                    }
+                }
+                
+                Persona.prototype.cualquierPropiedad = "Cualquier Valor";
+                
+                var yo = new Persona("Aleex", 26);
+                
+                write(yo.numero)
+                
+                write( yo.getNumero() );
+                
+                yo.setNumero(26);
+                
+                write( yo.getNumero() );
+                
+                write( yo.getTexto() );
+                
+                yo.setTexto("Cualquier Texto");
+                
+                write( yo.getTexto() );
+                
+                write( yo.cualquierPropiedad );
+                
+            </script>
+        </p>
+    </section>
+</body>
+</html>

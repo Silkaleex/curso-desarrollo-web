@@ -1,0 +1,15 @@
+*{ 
+    margin: 0; padding: 0; font-family: sans-serif; 
+}
+div{
+    width: 300px;
+    height: 180px;
+    margin: 100px auto;
+    border: 30px solid;
+    border-image-source: url(../modulo_css/imagen/margen.png);
+    border-image-slice: 5 ;
+    border-image-width: 3em;
+    border-image-outset: 50px;
+    background-color: aquamarine;
+    border-image-repeat: space;
+}

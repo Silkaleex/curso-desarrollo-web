@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herencias Prototype(POO)</title>
+    <style>
+      body{
+            background-color: #b98025;
+            padding-top: 100px;
+            padding-left: 25%;
+            margin: 0 auto;
+        }
+        
+        section{
+            border: 10px solid #f50909;
+            background-color: #7b9007;
+            text-align: center;
+            width: 500px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p>
+            <script>
+                function write(arg) {
+                    document.write(arg+"<br><br>")
+                }
+                
+                function log(arg) {
+                    console.log(arg);
+                }
+                
+                function Persona( nombre, edad ) {
+                    this.nombre = nombre;
+                    this.edad = edad;
+                }
+                Persona.prototype.saludar = function(nombre) {
+                    write( "Hola " + nombre + " ¿como estas? Te habla " + this.nombre + ", Tengo" + this.edad + " años." );
+                }
+                
+                function Robot( name, age ){
+                    Persona.call(this, name, age );
+                }
+                
+                Robot.prototype = new Persona();
+                Robot.prototype.constructor = Robot;
+                
+                var yo = new Persona("Silkaleex", 26);
+                
+                yo.saludar("Manolo");
+                
+                var Manolin = new Robot( "Alejandritin el robot",   " infinidades de " );
+                
+                Manolin.saludar( " Manolin " );
+                
+                log( yo.constructor );
+                
+                log( Manolin.constructor );
+                
+                function cualquiera() {
+                    
+                }
+                
+                cualquiera.prototype = new Robot();
+                
+                var cual = new cualquiera();
+                
+                cual.saludar();
+                
+            </script>
+        </p>
+    </section>
+</body>
+</html>
